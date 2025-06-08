@@ -1,9 +1,9 @@
 import os
 import google.generativeai as genai
 from telegram import Update
-from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters
+from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, CommandHandler, filters
 
-# API anahtarları (çevre değişkenlerinden)
+# API anahtarları
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 
@@ -20,7 +20,7 @@ BLACKLIST = [
     "seni kim döretdi", "ýaradyjy", "Ýahudy", "Hristian", "Musulman", "Ilon Mask"
 ]
 
-# İşletme Bilgisi
+# Tanıtım mesajı
 ISLETME_BILGI = """
 Salam dost! Men Redzone AI — Pubg Mobile oýunyndaky UC (Unknown Cash) satyn almakda siziň iň gowy kömekçiňiz.
 
@@ -75,6 +75,11 @@ Telegram: @redZone_gg
 Islendik soragyňyzy sorap bilersiňiz. Men — Redzone AI — sizi ýalňyz galdyrmajak dostuňyz!
 """
 
+# /start komutu işleyici
+async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(ISLETME_BILGI)
+
+# Mesaj işleyici
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.message.chat.type in ['group', 'supergroup']:
         if not context.bot.username.lower() in update.message.text.lower():
@@ -111,8 +116,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(bot_reply)
 
+# Ana uygulama
 if __name__ == "__main__":
     print("Bot işleýär... Synap görüň!")
     app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
+    app.add_handler(CommandHandler("start", start_command))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.run_polling()
