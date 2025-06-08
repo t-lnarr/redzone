@@ -83,7 +83,7 @@ Islendik soragyňyzy sorap bilersiňiz. Men — Redzone AI — sizi ýalňyz gal
 
 # /start komutu işlendiğinde kullanıcı sanki “kendini tanit” yazmış gibi davran
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    fake_message = "kendini tanit"
+    fake_message = "sen kim ?"
     update.message.text = fake_message
     await handle_message(update, context)
 
