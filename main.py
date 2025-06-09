@@ -95,6 +95,16 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     user_message = update.message.text.replace(f"@{context.bot.username}", "").strip()
 
+    
+    if "uygulamayı indirmek istiyorum" in user_message or "apk" in user_message:
+        download_link = "https://redzonegg.com/app-release.apk"
+        reply_text = (
+            "📲 <b>Programmanyňy şu ýerde ýükläp bilersiňiz:</b>\n"
+            f'<a href="{download_link}">⬇️ Redzone.apk indir</a>'
+        )
+        await update.message.reply_text(reply_text, parse_mode="HTML")
+        return
+    
     # Yasaklı kelime filtresi
     if any(term in user_message.lower() for term in BLACKLIST):
         await update.message.reply_text("Bagyşlaň, bu tema boýunça kömek edip bilemok.")
