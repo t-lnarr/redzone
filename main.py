@@ -23,33 +23,63 @@ MAX_HISTORY = 5
 
 BLACKLIST = [
     "din", "allah", "jeset", "syýasy", "porn", "ýarag", "intihar", "öldür", "adam öldür",
-    "seni kim döretdi", "ýaradyjy", "Ýahudy", "Hristian", "Musulman", "Ilon Mask"
+    "ýaradyjy", "Ýahudy", "Hristian", "Musulman", "Ilon Mask"
 ]
 
 # İşletme Bilgisi
 ISLETME_BILGI = """
-Salam dost! Men Redzone AI — Pubg Mobile oýunyndaky UC (Unknown Cash) satyn almakda siziň iň gowy kömekçiňiz.
+<b>🤖 Redzone AI</b> — Pubg Mobile oýunyndaky UC (Unknown Cash) satyn almakda siziň iň gowy kömekçiňiz!
 
-🔰 <b>Näme üçin siz UC satyn almaly?</b>
-UC — Pubg Mobile’daky ähli aýratynlyklaryň, “skin”-leriň, “royal pass”-laryň we oýun içinde tapawutlanmagyň açarydyr.
+🔰 <b>UC näme we näme üçin gerek?</b>
+UC — Pubg Mobile’daky ähli aýratynlyklaryň, skinleriň, Royal Passlaryň we beýleki premium hyzmatlaryň açarydyr. Oýun içinde tapawutlanmak, öz stiliňizi görkezmek we doly mümkinçiliklerden peýdalanmak üçin UC zerur!
 
 🎯 <b>Näme üçin Redzone saýlamaly?</b>
-✔️ Tiz hyzmat  
-✔️ Ynamdar hyzmat  
-✔️ Amatly bahalar  
-✔️ Müşderi goldawy  
-✔️ Yzygiderli aksiýalar  
-✔️ Mobil programma: <a href="https://redzonegg.com/app-release.apk">📲 Şu ýere bas we ýüklä</a>
+✔️ <b>Tiz hyzmat:</b> Sargytlaryňyz gysga wagtyň içinde ýerine ýetirilýär.  
+✔️ <b>Ynamdar hyzmat:</b> Müşderilerimiziň ynamy we razylygy biziň üçin birinji ýerde durýar.  
+✔️ <b>Amatly bahalar:</b> Bäsdeşlerden has arzan we elýeterli nyrhlar.  
+✔️ <b>Müşderi goldawy:</b> Islendik soraga AI + hakyky işgärler bilen çalt we takyk jogap.  
+✔️ <b>Yzygiderli aksiýalar:</b> Wagtal-wagtal arzanladyşlar, bonuslar we aýratyn teklipler!  
+✔️ <b>Mobil programma:</b> Aragatnaşyk, sargyt we UC bahalary bir ýerde!
 
-📞 <b>Nädip satyn almaly?</b>  
-+99362251883  
-+99361365984
+📲 <b>Mobil programmamyzy şu ýerden ýükläň:</b>  
+<a href="https://redzonegg.com/app-release.apk">⬇️ Redzone.apk — Ýükle!</a>
 
-🌐 Web saýdymyz: https://redzonegg.com  
-📱 Instagram: @redzone_official  
-TikTok: @redzone_gg_official  
-Telegram: @redZone_gg
+📞 <b>Satyn almak üçin jaň ediň:</b>  
+📱 +99362251883  
+📱 +99361365984
+
+🌐 <b>Web saýdymyz:</b>  
+<a href="https://redzonegg.com">🔗 redzonegg.com</a>
+
+📱 <b>Sosial mediada bizi tap:</b>  
+• Instagram: @redzone_official  
+• TikTok: @redzone_gg_official  
+• Telegram: @redZone_gg
+
+💸 <b>Telefon bilen töleg arkaly UC bahalary:</b>  
+▫️ 60 UC = 25 TMT  
+▫️ 325 UC = 120 TMT  
+▫️ 660 UC = 240 TMT  
+▫️ 1800 UC = 600 TMT  
+▫️ 3850 UC = 1200 TMT  
+▫️ 8100 UC = 2300 TMT
+
+💵 <b>Nagt töleg arkaly UC bahalary:</b>  
+▫️ 60 UC = 19 TMT  
+▫️ 325 UC = 98 TMT  
+▫️ 660 UC = 193 TMT  
+▫️ 1800 UC = 480 TMT  
+▫️ 3850 UC = 960 TMT  
+▫️ 8100 UC = 1920 TMT
+
+💬 <b>Soraglaryňyz barmy?</b>  
+Meni soragyňyz bilen synap görüň!  
+Men — <b>Redzone AI</b> — sizi ýalňyz galdyrmajak söýgüli kömekçiňiz 😄
+
+
+Men — Redzone komandasy tarapyndan, size iň oňat hyzmaty bermek we islendik soraglaryňyza çalt kömek etmek üçin döredilen dostuňyz.
 """
+
 
 # /start komutu işlendiğinde kullanıcı sanki “kendini tanit” yazmış gibi davran
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
