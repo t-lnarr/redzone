@@ -50,11 +50,12 @@ Satyn almak üçin bize **telefon arkaly jaň ediň**:
 https://redzonegg.com
 
 📲 **Redzone mobil programmasy:**
-Programmany saýdymyzdan ýükläp bilersiňiz!
+Programmany <a href="https://redzonegg.com/app-release.apk">📲 yüklemek üçin şu ýere bas</a>
 Mobil programmamyzyň içinde:
 - UC sargytlary
 - Satlyk Pubg akkauntlary
 - Täzelikler we indirimler bilen doly hyzmat bar!
+
 
 📱 **Sosial mediada bizi tap:**
 Instagram: @redzone_official
