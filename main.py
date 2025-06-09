@@ -124,9 +124,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE, ove
     prompt = (
         f"{ISLETME_BILGI}\n\n"
         f"Dost bilen gepleşik:\n{history_text}\n\n"
-        f"Dostdan täze sorag:\n{user_message}\n\n"
+        f"Täze sorag:\n{user_message}\n\n"
         f"⚠️ Edebe laýyk we umumy maglumatlara jogap ber, dini/syýasy/ahlakdan daş temalardan gaç. "
-        f"Jogap bereniňde köplenç 'Dost' diýip gürleş. "
+        f"Jogap bereniňde gerek bolsa 'Dost' diýip gürleş we gysga ýöne dogry jogap ber. "
         f"Bilmedik, düşünmedik soragyň berilende 'Bagyşlaň, soragyňyza düşünmedim. Başga bir soragyňyz barmy?' diý. Emojiler ulan."
     )
 
