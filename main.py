@@ -84,7 +84,11 @@ Islendik soragyňyzy sorap bilersiňiz. Men — Redzone AI — sizi ýalňyz gal
 # /start komutu işlendiğinde kullanıcı sanki “kendini tanit” yazmış gibi davran
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     update.message.text = "sen kim ?"
-    await handle_message(update, context)
+    await handle_message(
+    update=update,
+    context=context,
+    user_override_message="sen kim?"
+    )
 
 # Mesaj işleme fonksiyonu
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -96,11 +100,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_message = update.message.text.replace(f"@{context.bot.username}", "").strip()
 
     
-    if "uygulamayı indirmek istiyorum" in user_message or "apk" in user_message:
+    if "Programmany nädip alyp bolar" in user_message or "apk" in user_message:
         download_link = "https://redzonegg.com/app-release.apk"
         reply_text = (
-            "📲 <b>Programmanyňy şu ýerde ýükläp bilersiňiz:</b>\n"
-            f'<a href="{download_link}">⬇️ Redzone.apk indir</a>'
+            "📲 <b>Redzone programmasyny şu ýerden ýükläp bilersiňiz:</b>\n"
+            f'<a href="{download_link}">⬇️ Redzone.apk ýükle</a>'
         )
         await update.message.reply_text(reply_text, parse_mode="HTML")
         return
